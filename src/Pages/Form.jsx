@@ -1,7 +1,7 @@
 import React, {useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
-//import { Modal } from "";
+import { Modal } from "npm-modal-react";
 import { ErrorMessage } from "@hookform/error-message";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -36,14 +36,14 @@ function Form(props) {
         <form action="#" id="create-employee" onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="first-name">Prenom</label>
           <input
-            type="text"
+            type="text" id="firstname"
             {...register("firstname", { required: "Ceci est Requis." })}
           />
           <ErrorMessage errors={errors} name="firstname" as="p" />
 
           <label htmlFor="last-name">Nom</label>
           <input
-            type="text"
+            type="text" id="lastname"
             {...register("lastname", { required: "Ceci est Requis." })}
           />
           <ErrorMessage errors={errors} name="lastname" as="p" />
@@ -93,14 +93,14 @@ function Form(props) {
 
             <label htmlFor="street">Rue</label>
             <input
-              type="text"
+              type="text" id="street"
               {...register("street", { required: "Ceci est Requis." })}
             />
             <ErrorMessage errors={errors} name="street" as="p" />
 
             <label htmlFor="city">Ville</label>
             <input
-              type="text"
+              type="text" id="ville"
               {...register("city", { required: "Ceci est Requis." })}
             />
             <ErrorMessage errors={errors} name="city" as="p" />
@@ -117,7 +117,7 @@ function Form(props) {
 
             <label htmlFor="zip-code">code postal</label>
             <input
-              type="number"
+              type="number" id="code postal"
               {...register("zipCode", { required: "Ceci est Requis." })}
             />
             <ErrorMessage errors={errors} name="zipCode" as="p" />
@@ -139,9 +139,9 @@ function Form(props) {
           <button type="submit">Sauvegarder</button>
         </form>
       </div>
-      {/* <Modal isOpen={isOpenModal} backdrop crossClose onClose={toggleModal}>
-        <p>Employee Created!</p>
-      </Modal> */}
+      <Modal isOpen={isOpenModal} backdrop crossClose onClose={toggleModal}>
+        <p>Employee Créer!</p>
+      </Modal>
     </>
   );
 }
