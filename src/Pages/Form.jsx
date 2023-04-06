@@ -1,7 +1,7 @@
 import React, {useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
-import { Modal } from "npm-modal-react";
+import { Modal } from "react-modal-youssef";
 import { ErrorMessage } from "@hookform/error-message";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";

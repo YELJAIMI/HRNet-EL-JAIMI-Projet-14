@@ -11,7 +11,7 @@ import EntriesInfo from "./EntriesInfo";
 
 export const Table = (props) => {
   const columns = useMemo(() => COLUMNS, []);
-  const data = useMemo(() => props.employees, []);
+  const data = useMemo(() => props.employees, [props.employees]);
 
   const tableInstance = useTable(
     {
